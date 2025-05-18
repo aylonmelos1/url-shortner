@@ -64,7 +64,7 @@ export async function returnLink(req: Request, res: Response) {
             redirect = "false"
             res.status(404).json({ success: false, message: "Link não encontrado" })
         } else {
-            redirect = link.long
+            redirect = link.long.replace('https://','').replace('http://',"")
         }
 
         
