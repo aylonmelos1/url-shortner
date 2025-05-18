@@ -45,7 +45,7 @@ export const insertLink = async (link: Link) => {
             log.info(formattedLimitDate); // Exemplo de saída: "2025-05-18 14:30:45"        }
         }
         const linkData = (await banco).run(link.short, link.long, link.path, formattedLimitDate ?? null);
-        log.debug("Link salvo no banco de dados com Sucesso ✅", linkData)
+        log.debug("Link salvo no banco de dados com Sucesso ✅")
         return linkData;
     } catch (error) {
         log.fatal(error);
